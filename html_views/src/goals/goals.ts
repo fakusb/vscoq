@@ -67,7 +67,7 @@ const vscode = acquireVsCodeApi();
 
 function goalsLoad() {
 
-  window.onresize = throttleEventHandler(event => computePrintingWidth);
+  window.addEventListener("resize",throttleEventHandler(event => computePrintingWidth()));
   window.addEventListener("focus", onWindowGetFocus, true);
 
   window.addEventListener('message', event => {
